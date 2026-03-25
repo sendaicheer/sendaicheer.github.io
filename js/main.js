@@ -130,25 +130,4 @@ document.addEventListener('click', (e) => {
   setTimeout(() => el.remove(), 800);
 });
 
-// ============================
-// お問い合わせ種別の切り替え
-// ============================
-const typeRadios = document.querySelectorAll('input[name="type"]');
-const childInfo = document.getElementById('child-info');
-const childTitle = document.getElementById('child-section-title');
-const childRequiredFields = document.querySelectorAll('.child-required');
-
-function toggleChildInfo() {
-  const selected = document.querySelector('input[name="type"]:checked');
-  if (!selected) return;
-  const isEvent = selected.value === 'event';
-  if (childInfo) {
-    childInfo.style.display = isEvent ? 'none' : 'block';
-    if (childTitle) childTitle.style.display = isEvent ? 'none' : 'block';
-    childRequiredFields.forEach(f => f.required = !isEvent);
-  }
-}
-
-typeRadios.forEach(r => r.addEventListener('change', toggleChildInfo));
-toggleChildInfo();
 
