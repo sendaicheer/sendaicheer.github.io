@@ -1,0 +1,395 @@
+/* ============================
+   チームについてページ
+   ============================ */
+
+/* スローガンヒーロー */
+.slogan-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  text-align: center;
+  padding: 80px 24px 72px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slogan-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(135,206,235,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(255,182,193,0.15) 0%, transparent 50%);
+}
+
+.slogan-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.slogan-season {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.3em;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 20px;
+}
+
+.slogan-main {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 900;
+  color: white;
+  line-height: 1.3;
+  margin-bottom: 16px;
+  text-shadow: 0 0 40px rgba(135,206,235,0.4);
+}
+
+.slogan-en {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.85rem, 2vw, 1.1rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: linear-gradient(135deg, #87CEEB, #FFB6C1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* CHEER SPIRIT */
+.spirit-section {
+  background: linear-gradient(160deg, #f0f9ff, #fff0f5);
+  padding: 56px 0;
+}
+
+.spirit-wrap {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.spirit-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.35em;
+  background: linear-gradient(135deg, #87CEEB, #FFB6C1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 28px;
+}
+
+.spirit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.spirit-list li {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.spirit-list li::before {
+  content: '✦';
+  background: linear-gradient(135deg, #87CEEB, #FFB6C1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* セクションタイトル */
+.section-title-about {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  color: #222;
+  margin-bottom: 12px;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.section-title-about::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(135deg, #87CEEB, #FFB6C1);
+  border-radius: 2px;
+}
+
+.section-desc-about {
+  text-align: center;
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+}
+
+/* スローガンの意味 */
+.slogan-section {
+  background: #fafafa;
+}
+
+.slogan-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.slogan-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.slogan-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #87CEEB, #FFB6C1);
+}
+
+.slogan-card-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(135,206,235,0.15);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.slogan-card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #87CEEB, #FFB6C1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.slogan-card h3 {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.slogan-card p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* MISSION */
+.mission-section {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  padding: 80px 0;
+}
+
+.mission-wrap {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.mission-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.35em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 20px;
+}
+
+.mission-text {
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  font-weight: 900;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.mission-text strong {
+  background: linear-gradient(135deg, #87CEEB, #FFB6C1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mission-sub {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.9;
+}
+
+/* なぜチアリーディング */
+.why-section {
+  background: white;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  background: linear-gradient(160deg, #f8fdff, #fff5f8);
+  border-radius: 18px;
+  padding: 28px 22px;
+  border: 1px solid rgba(135,206,235,0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(135,206,235,0.2);
+}
+
+.why-icon {
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+  background: linear-gradient(135deg, #87CEEB, #FFB6C1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.why-card h3 {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  font-size: 0.88rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* 指導方針 */
+.policy-section {
+  background: #fafafa;
+}
+
+.policy-wrap {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 48px;
+  align-items: start;
+  margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.policy-quote {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #222;
+  border-left: 4px solid #87CEEB;
+  padding: 16px 20px;
+  background: white;
+  border-radius: 0 12px 12px 0;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  box-shadow: 0 2px 12px rgba(135,206,235,0.1);
+}
+
+.policy-main p {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.policy-list {
+  background: white;
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.policy-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.policy-item i {
+  color: #87CEEB;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* CTA */
+.about-cta {
+  text-align: center;
+  padding: 20px 0 0;
+}
+
+.about-cta p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ============================
+   レスポンシブ
+   ============================ */
+@media (max-width: 768px) {
+  .slogan-hero {
+    padding: 60px 24px 52px;
+  }
+
+  .slogan-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .policy-wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}

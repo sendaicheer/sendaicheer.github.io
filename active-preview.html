@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>activeスタイル プレビュー</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Montserrat:wght@800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans JP', sans-serif; background: #f5f5f5; padding: 40px 24px; }
+
+    h1 { font-size: 1.2rem; font-weight: 900; color: #333; margin-bottom: 40px; text-align: center; }
+
+    .preview-block {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    .preview-label {
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    /* 共通ナビ */
+    .fake-header {
+      background: white;
+      border-bottom: 1px solid #eee;
+      padding: 16px 32px;
+      border-radius: 12px;
+    }
+
+    .fake-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .fake-nav a {
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #555;
+      white-space: nowrap;
+    }
+
+    .fake-nav .nav-btn {
+      background: linear-gradient(135deg, #87CEEB, #FFB6C1);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+    }
+
+    /* ① 下線タイプ */
+    .style-underline a.active {
+      color: #87CEEB;
+      border-bottom: 2px solid #87CEEB;
+      padding-bottom: 2px;
+    }
+
+    /* ② 色だけタイプ */
+    .style-color a.active {
+      color: #87CEEB;
+      font-weight: 900;
+    }
+
+    /* ③ 背景丸みタイプ */
+    .style-pill a.active {
+      color: #87CEEB;
+      background: rgba(135,206,235,0.12);
+      border-radius: 20px;
+      padding: 4px 12px;
+    }
+
+    .note {
+      margin-top: 16px;
+      font-size: 0.82rem;
+      color: #999;
+    }
+    .note span {
+      color: #87CEEB;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ナビ activeスタイル — 3パターン比較</h1>
+
+  <!-- ① 下線 -->
+  <div class="preview-block">
+    <div class="preview-label">① 下線タイプ</div>
+    <div class="fake-header">
+      <ul class="fake-nav style-underline">
+        <li><a href="#">チームについて</a></li>
+        <li><a href="#">クラス紹介</a></li>
+        <li><a href="#">コーチ紹介</a></li>
+        <li><a href="#" class="active">活動実績</a></li>
+        <li><a href="#" class="nav-btn">体験・お問い合わせ</a></li>
+      </ul>
+    </div>
+    <p class="note">→ <span>活動実績</span> ページを開いているときのイメージ</p>
+  </div>
+
+  <!-- ② 色だけ -->
+  <div class="preview-block">
+    <div class="preview-label">② 色だけタイプ（シンプル）</div>
+    <div class="fake-header">
+      <ul class="fake-nav style-color">
+        <li><a href="#">チームについて</a></li>
+        <li><a href="#">クラス紹介</a></li>
+        <li><a href="#">コーチ紹介</a></li>
+        <li><a href="#" class="active">活動実績</a></li>
+        <li><a href="#" class="nav-btn">体験・お問い合わせ</a></li>
+      </ul>
+    </div>
+    <p class="note">→ <span>活動実績</span> ページを開いているときのイメージ</p>
+  </div>
+
+  <!-- ③ 背景丸み -->
+  <div class="preview-block">
+    <div class="preview-label">③ 背景丸みタイプ（ポップ）</div>
+    <div class="fake-header">
+      <ul class="fake-nav style-pill">
+        <li><a href="#">チームについて</a></li>
+        <li><a href="#">クラス紹介</a></li>
+        <li><a href="#">コーチ紹介</a></li>
+        <li><a href="#" class="active">活動実績</a></li>
+        <li><a href="#" class="nav-btn">体験・お問い合わせ</a></li>
+      </ul>
+    </div>
+    <p class="note">→ <span>活動実績</span> ページを開いているときのイメージ</p>
+  </div>
+
+</body>
+</html>

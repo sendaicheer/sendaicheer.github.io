@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>体験・お問い合わせ｜仙台オールスターチア UNICORNS｜仙台のチアリーディング</title>
+  <meta name="description" content="仙台チア「仙台オールスターチア UNICORNS」への体験レッスン申し込み・お問い合わせ。仙台でチアリーディングを始めたい方、見学・体験希望、イベント出演依頼などお気軽にご連絡ください。" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6REF2D0G59"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6REF2D0G59');
+  </script>
+  <link rel="icon" type="image/png" href="images/starlogo.png" />
+  <link rel="apple-touch-icon" href="images/starlogo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Cinzel+Decorative:wght@900&family=Montserrat:wght@800;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/teamlogo.png" alt="UNICORNS" class="logo-icon" />
+        </a>
+        <div class="logo-text">
+          <span class="logo-sub">仙台オールスターチア</span>
+          <span class="logo-main">UNICORNS</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="about.html">チームについて</a></li>
+          <li><a href="class.html">クラス紹介</a></li>
+          <li><a href="coach.html">コーチ紹介</a></li>
+          <li><a href="activity.html">活動実績</a></li>
+          <li><a href="contact.html" class="nav-btn">体験・お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- ページタイトル -->
+  <div class="page-hero">
+    <h1 class="page-title">お問い合わせ</h1>
+    <p>イベント出演のご依頼、体験のご希望など<br>お問い合わせフォームよりお気軽にどうぞ</p>
+  </div>
+
+  <!-- フォーム -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-wrap">
+
+        <!-- 左：フォーム -->
+        <div class="contact-form-wrap">
+          <form class="contact-form-page" id="contactForm" action="https://formspree.io/f/mykndzrv" method="POST">
+
+            <!-- お問い合わせ種別 -->
+            <div class="form-group">
+              <label>お問い合わせ種別 <span class="required">必須</span></label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="type" value="trial" checked />
+                  <span>見学・体験希望</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="type" value="event" />
+                  <span>出演依頼</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="type" value="sponsor" />
+                  <span>協賛・スポンサー</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="type" value="other" />
+                  <span>その他</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- お子様の情報 -->
+            <div class="form-section-title" id="child-section-title">お子様の情報</div>
+
+            <div id="child-info">
+            <div class="form-row">
+              <div class="form-group">
+                <label>お子様のお名前 <span class="required">必須</span></label>
+                <input type="text" name="お子様のお名前" placeholder="仙台 知愛" class="child-required" />
+              </div>
+              <div class="form-group">
+                <label>フリガナ <span class="required">必須</span></label>
+                <input type="text" name="フリガナ" placeholder="センダイ チア" class="child-required" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>生年月日 <span class="required">必須</span></label>
+                <input type="date" name="生年月日" class="child-required" />
+              </div>
+              <div class="form-group">
+                <label>学年 <span class="required">必須</span></label>
+                <select name="学年" class="child-required">
+                  <option value="">選択してください</option>
+                  <option>年少</option>
+                  <option>年中</option>
+                  <option>年長</option>
+                  <option>小学1年生</option>
+                  <option>小学2年生</option>
+                  <option>小学3年生</option>
+                  <option>小学4年生</option>
+                  <option>小学5年生</option>
+                  <option>小学6年生</option>
+                  <option>中学1年生</option>
+                  <option>中学2年生</option>
+                  <option>中学3年生</option>
+                  <option>その他</option>
+                </select>
+              </div>
+            </div>
+
+            </div><!-- /#child-info -->
+
+            <!-- 保護者情報 -->
+            <div class="form-section-title" id="parent-title">保護者情報</div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>保護者氏名 <span class="required">必須</span></label>
+                <input type="text" name="保護者氏名" placeholder="仙台 太郎" required />
+              </div>
+              <div class="form-group">
+                <label>電話番号</label>
+                <input type="tel" name="電話番号" placeholder="090-0000-0000" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>メールアドレス <span class="required">必須</span></label>
+              <input type="email" name="email" placeholder="example@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label>メールアドレス（確認） <span class="required">必須</span></label>
+              <input type="email" name="メールアドレス確認" placeholder="example@email.com" required />
+            </div>
+
+            <!-- きっかけ -->
+            <div class="form-group">
+              <label>UNICORNSを知ったきっかけ <span class="required">必須</span></label>
+              <div class="checkbox-group">
+                <label class="checkbox-label"><input type="checkbox" name="きっかけ" value="紹介" /><span>紹介</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="きっかけ" value="Instagram" /><span>Instagram</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="きっかけ" value="ホームページ" /><span>ホームページ</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="きっかけ" value="チラシ" /><span>チラシ</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="きっかけ" value="イベント演技" /><span>イベント演技</span></label>
+                <label class="checkbox-label"><input type="checkbox" name="きっかけ" value="その他" /><span>その他</span></label>
+              </div>
+            </div>
+
+            <!-- お問い合わせ内容 -->
+            <div class="form-group">
+              <label>お問い合わせ内容</label>
+              <textarea name="お問い合わせ内容" rows="5" placeholder="ご質問・ご要望などご自由にお書きください"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">送信する</button>
+
+          </form>
+        </div>
+
+        <!-- 右：連絡先情報 -->
+        <div class="contact-info-wrap">
+          <div class="info-card">
+            <h3>協賛・スポンサー募集</h3>
+            <p style="font-size:0.88rem; color:#666; line-height:1.9; margin-bottom:12px;">仙台オールスターチアは、共に挑戦し、支えてくださる企業様・個人様とのご縁を大切にしています。</p>
+            <p style="font-size:0.88rem; color:#666; line-height:1.9; margin-bottom:12px;">2023年10月、たった1人からスタートしたチームが、設立わずか1年で東北初の全国大会へ。これからも、もっと大きな舞台で、もっと多くのこどもたちに夢を届けるために挑戦し続けます。</p>
+            <p style="font-size:0.88rem; color:#666; line-height:1.9; margin-bottom:16px;">私たちの活動にご関心をお持ちいただけましたら、お気軽にお問い合わせください。</p>
+            <div class="info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:sendaicheer@gmail.com">sendaicheer@gmail.com</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <h3>お知らせ</h3>
+            <div class="info-item">
+              <i class="fa-brands fa-instagram"></i>
+              <a href="https://www.instagram.com/sendaicheer/" target="_blank">公式Instagram</a>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:sendaicheer@gmail.com">メールアドレス</a>
+            </div>
+            <div class="info-item">
+              <i class="fa-solid fa-file-lines"></i>
+              <a href="https://forms.gle/98jGiqx1gaxv1aKSA" target="_blank">体験申し込みフォーム</a>
+            </div>
+          </div>
+          <div class="info-card">
+            <h3>活動場所</h3>
+            <div class="info-item" style="align-items: flex-start;">
+              <i class="fa-solid fa-location-dot" style="margin-top: 3px;"></i>
+              <div>
+                <a href="https://maps.google.com/?q=宮城県仙台市宮城野区中野3丁目1-18" target="_blank">Trampo-Pit<br>宮城県仙台市宮城野区中野3丁目1-18</a>
+                <p style="font-size:0.85rem; color:#777; margin-top:4px;">その他仙台市内公共施設</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="images/teamlogo.png" alt="UNICORNS" class="footer-logo-img" />
+      <div class="footer-logo">仙台オールスターチア</div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/sendaicheer/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:sendaicheer@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <p class="footer-copy">&copy; 2026 仙台オールスターチア. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 固定ボトムバー -->
+  <div class="trial-fixed-bar">
+    <span class="trial-fixed-bar-text">🌸 春の無料体験会 受付中！</span>
+    <a href="trial.html" class="trial-fixed-bar-btn">詳細・申し込みはこちら →</a>
+  </div>
+
+  <!-- フローティングボタン -->
+  <a href="trial.html" class="trial-float-btn">
+    <svg class="trial-float-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="20,4 23.5,14.5 34,14.5 25.5,21 28.5,32 20,25.5 11.5,32 14.5,21 6,14.5 16.5,14.5" fill="white" opacity="0.95"/>
+      <circle cx="33" cy="8" r="2.2" fill="white" opacity="0.8"/>
+      <circle cx="7" cy="30" r="1.5" fill="white" opacity="0.7"/>
+      <circle cx="35" cy="28" r="1.2" fill="white" opacity="0.6"/>
+    </svg>
+    <span class="trial-float-text">無料<br>体験会</span>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    const typeRadios = document.querySelectorAll('input[name="type"]');
+    const childSection = document.getElementById('child-info');
+    const childTitle = document.getElementById('child-section-title');
+    const childRequiredFields = document.querySelectorAll('.child-required');
+
+    const parentTitle = document.getElementById('parent-title');
+
+    function toggleChildSection() {
+      const selected = document.querySelector('input[name="type"]:checked').value;
+      const hide = selected === 'sponsor' || selected === 'other' || selected === 'event';
+      childSection.style.display = hide ? 'none' : '';
+      childTitle.style.display = hide ? 'none' : '';
+      childRequiredFields.forEach(f => {
+        if (hide) f.removeAttribute('required');
+        else f.setAttribute('required', '');
+      });
+      parentTitle.textContent = hide ? 'ご連絡先' : '保護者情報';
+    }
+
+    typeRadios.forEach(r => r.addEventListener('change', toggleChildSection));
+    toggleChildSection();
+  </script>
+</body>
+</html>

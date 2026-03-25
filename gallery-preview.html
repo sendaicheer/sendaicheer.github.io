@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ギャラリーイメージ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet" />
+  <style>
+    body { margin: 0; background: #f9f9f9; font-family: 'Noto Sans JP', sans-serif; }
+
+    .section { padding: 80px 24px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 48px;
+      color: #333;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(135deg, #87CEEB, #FFB6C1);
+      border-radius: 2px;
+      margin: 12px auto 0;
+    }
+
+    /* ========== A案：均等グリッド ========== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .gallery-grid .item {
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #b3e5fc, #f8bbd0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #888;
+      font-weight: 700;
+    }
+
+    /* ========== B案：モザイク（大小混在） ========== */
+    .gallery-mosaic {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 200px);
+      gap: 10px;
+    }
+    .gallery-mosaic .item {
+      border-radius: 12px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #b3e5fc, #f8bbd0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #888;
+      font-weight: 700;
+    }
+    .gallery-mosaic .big-h { grid-column: span 2; }
+    .gallery-mosaic .big-v { grid-row: span 2; }
+    .gallery-mosaic .item:nth-child(odd) { background: linear-gradient(135deg, #c5e8f7, #ffe4ed); }
+    .gallery-mosaic .item:nth-child(even) { background: linear-gradient(135deg, #ffe4ed, #c5e8f7); }
+
+    /* ========== C案：横スクロール ========== */
+    .gallery-scroll {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      scroll-snap-type: x mandatory;
+    }
+    .gallery-scroll::-webkit-scrollbar { height: 4px; }
+    .gallery-scroll::-webkit-scrollbar-thumb { background: #FFB6C1; border-radius: 4px; }
+    .gallery-scroll .item {
+      min-width: 300px;
+      height: 220px;
+      border-radius: 16px;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #888;
+      font-weight: 700;
+    }
+    .gallery-scroll .item:nth-child(odd)  { background: linear-gradient(135deg, #c5e8f7, #ffe4ed); }
+    .gallery-scroll .item:nth-child(even) { background: linear-gradient(135deg, #ffe4ed, #c5e8f7); }
+
+    .label { text-align: center; font-size: 0.8rem; color: #aaa; margin-bottom: 20px; letter-spacing: 0.1em; }
+    hr { border: none; border-top: 1px dashed #ddd; margin: 60px 0; }
+  </style>
+</head>
+<body>
+<div class="section">
+  <div class="container">
+
+    <p class="label">▼ A案：均等グリッド（3列 × 3行 ＝ 9枚）</p>
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery-grid">
+      <div class="item">写真1</div><div class="item">写真2</div><div class="item">写真3</div>
+      <div class="item">写真4</div><div class="item">写真5</div><div class="item">写真6</div>
+      <div class="item">写真7</div><div class="item">写真8</div><div class="item">写真9</div>
+    </div>
+
+    <hr>
+
+    <p class="label">▼ B案：モザイク（大小混在 ＝ 9枚、メリハリあり）</p>
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery-mosaic">
+      <div class="item big-h">写真1（横長）</div>
+      <div class="item">写真2</div>
+      <div class="item">写真3</div>
+      <div class="item big-v">写真4（縦長）</div>
+      <div class="item">写真5</div>
+      <div class="item">写真6</div>
+      <div class="item big-h">写真7（横長）</div>
+      <div class="item">写真8</div>
+      <div class="item">写真9</div>
+    </div>
+
+    <hr>
+
+    <p class="label">▼ C案：横スクロール（枚数自由、スマホ向き）</p>
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery-scroll">
+      <div class="item">写真1</div><div class="item">写真2</div><div class="item">写真3</div>
+      <div class="item">写真4</div><div class="item">写真5</div><div class="item">写真6</div>
+      <div class="item">写真7</div><div class="item">写真8</div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
